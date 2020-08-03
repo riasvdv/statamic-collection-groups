@@ -1,0 +1,19 @@
+{
+    "name": "rias/statamic-collection-groups",
+    "autoload": {
+        "psr-4": {
+            "Rias\\CollectionGroups\\": "src"
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Statamic Collection Groups",
+            "description": "Group your collections into separate groups"
+        },
+        "laravel": {
+            "providers": [
+                "Rias\\CollectionGroups\\ServiceProvider"
+            ]
+        }
+    }
+}
