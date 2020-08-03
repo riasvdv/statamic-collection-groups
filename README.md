@@ -4,7 +4,7 @@
 
 > Collection Groups for Statamic 3.
 
-Group your collections into separate groups
+Group your collections into separate groups, this also removes the collections from the "Collections" nav item
 
 ## Installation
 
