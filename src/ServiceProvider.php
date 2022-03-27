@@ -28,10 +28,10 @@ class ServiceProvider extends AddonServiceProvider
 
                 /** @var \Statamic\CP\Navigation\NavItem $item */
                 $item = $nav->create($label)
+                    ->active($collections->pluck('url')->join('|'))
                     ->section('Content')
                     ->icon('content-writing')
                     ->url($collections->first()->url());
-
 
                 $item->children($collections);
             });
