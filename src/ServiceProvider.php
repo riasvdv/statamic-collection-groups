@@ -18,11 +18,13 @@ class ServiceProvider extends AddonServiceProvider
 
         Nav::extend(function (\Statamic\CP\Navigation\Nav $nav) {
             collect(config('statamic.collection-groups'))->each(function ($collections, $label) use ($nav) {
-                $collections = collect($collections)->map(function (string $collectionHandle) {
+                $collections = collect($collections)->map(function (string $collectionHandle, $label) {
                     $collection = Collection::findByHandle($collectionHandle);
 
+                    $label = !is_numeric($label) ? $label : $collection->title();
+
                     return (new NavItem())
-                        ->name($collection->title())
+                        ->name($label)
                         ->url($collection->showUrl());
                 });
 

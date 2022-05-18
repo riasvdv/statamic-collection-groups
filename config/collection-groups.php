@@ -10,7 +10,7 @@
  *     ],
  *     'Group 2 label' => [
  *         'collection_handle_3',
- *         'collection_handle_4',
+ *         'Custom Label' => 'collection_handle_4',
  *     ]
  * ]
  */
